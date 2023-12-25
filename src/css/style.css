@@ -60,3 +60,241 @@
   font-weight: 700;
   src: url("../assets/fonts/manrope-v15-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+
+:root {
+  --neutral-color: #ffffff;
+  --primary-color: #24053e;
+  --secondary-color: #44ffa1;
+  --text-color: #584d62;
+  --heading-color: #fcf8ff;
+
+  --fw-normal: 400;
+  --fw-bolder: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --fs-small: 0.833rem;
+  --fs-default: 1rem;
+  --fs-lg: 1.2rem;
+  --fs-xl: 1.44rem;
+  --fs-2xl: 1.728rem;
+  --fs-3xl: 2.074rem;
+  --fs-4xl: 2.44rem;
+  --fs-5xl: 3.074rem;
+  --fs-6xl: 3.5rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --primary-ff: "Manrope", sans-serif;
+  --secondary-ff: "Fraunces", sans-serif;
+
+  font-family: var(--primary-ff);
+  overflow-x: hidden;
+}
+
+.content {
+  min-height: 100vh;
+}
+
+.wrapper {
+  --width: 71.25rem;
+  max-width: var(--width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.wrapper--small {
+  --width: 35rem;
+}
+
+.wrapper--testimonial {
+  --width: 40rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.hero {
+  position: relative;
+  background-color: var(--primary-color);
+  border-radius: 100% /0 0 80px 80px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.hero__content {
+  position: relative;
+  padding-bottom: 192px;
+  text-align: center;
+}
+
+.hero__title {
+  font-weight: var(--fw-normal);
+  font-family: var(--secondary-ff);
+  color: var(--neutral-color);
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.hero__image {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.hero__title-special {
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.hero__decoration {
+  position: absolute;
+}
+
+.hero__decoration--left {
+  left: -7rem;
+  top: 7rem;
+}
+
+.hero__decoration--right {
+  top: 26rem;
+  right: -2rem;
+}
+
+.features {
+  padding: 128px 0;
+  background-color: var(--heading-color);
+  border-radius: 100% /0 0 80px 80px;
+}
+
+.features__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.feature__title {
+  font-family: var(--secondary-ff);
+  color: var(--primary-color);
+  font-weight: var(--fw-normal);
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature__description {
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.feature__number-container {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+  font-family: var(--secondary-ff);
+  margin-bottom: 2rem;
+}
+
+.testimonial {
+  padding: 256px 0 96px;
+  position: relative;
+}
+
+.testimonial__image {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  width: 100%;
+  max-width: 350px;
+  transform: translate(-50%, -50%);
+}
+
+.testimonial__container {
+  position: relative;
+  padding: 2rem;
+  background-color: var(--primary-color);
+}
+
+.testimonial__title {
+  font-family: var(--secondary-ff);
+  color: var(--neutral-color);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial__description {
+  line-height: 1.5;
+  color: var(--neutral-color);
+}
+
+.testimonial__decoration {
+  position: absolute;
+  bottom: -6rem;
+  right: 2rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 96px;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link:link,
+.link:visited {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.link--access:link,
+.link--access:visited {
+  color: var(--neutral-color);
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.link--cta:link,
+.link--cta:visited {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: var(--fw-bold);
+  padding: 1rem 1.5rem;
+}
